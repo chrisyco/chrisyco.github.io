@@ -183,10 +183,10 @@ function save() {
     stop();
     document.getElementById("blackouter").className = "blackout";
     var b = document.getElementById("savebox");
-    b.innerHTML = "<p>Right click on the image below and click <q>Save Image As</q> to save it.</p><p><a href='javascript:void 0'><strong>Close this window</strong></a> when you're done.</p>"
+    b.innerHTML = "<p>Right click on the image below and click <q>Save Image As</q> to save it.</p><p><button type='button'><strong>Close this window</strong></button> when you're done.</p>"
                                 + '<img alt="[image]" src="' + document.getElementById("canvas").toDataURL() + '" />';
     b.className = "popup";
-    b.getElementsByTagName("a")[0].onclick = function() {
+    b.getElementsByTagName("button")[0].onclick = function() {
         document.getElementById("blackouter").className = "";
         document.getElementById("savebox").className = "";
         document.getElementById("savebox").innerHTML = "";

@@ -3,14 +3,8 @@
     border: 1px solid #0a0;
     border-color: #0c0 #090 #090 #0c0;
     background: #cfc;
-    margin: 0 0 2em;
-}
-h2:before {
-    content: ".";
-    display: block;
-    height: 0;
-    clear: both;
-    visibility: hidden;
+    margin-top: 2em;
+    margin-bottom: 2em;
 }
 #controls {
     float: left;
@@ -29,10 +23,10 @@ input {
     width: 10em;
     text-align: right;
 }
-button {
+#buttons button {
     min-height: 3em;
 }
-button[disabled] img {
+#buttons button[disabled] img {
     opacity: 0.25;
 }
 #canvas {

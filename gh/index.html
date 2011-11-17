@@ -8,33 +8,39 @@ js: [gh.js]
 <p>This experiment will not work in Internet Explorer. Try this experiment with a better browser such as <a href="http://www.google.com/chrome">Google Chrome</a> instead.</p>
 <![endif]-->
 <div id="container">
-<div id="buttons">
-<button type="button" id="start" title="Start"><img alt="" src="play.png" /><br />Start</button>
-<button type="button" id="stop" title="Pause"><img alt="" src="pause.png" /><br />Pause</button>
-<button type="button" id="step" title="Step"><img alt="" src="step.png" /><br />Step</button>
-<button type="button" id="clear" title="Clear"><img alt="" src="clear.png" /><br />Clear</button>
-<span class="separator"></span>
-<button type="button" id="random" title="Fill Random"><img alt="" src="fill-random.png" /><br />Fill Random</button>
-<span class="separator"></span>
-<button type="button" id="save" title="Save Image"><img alt="" src="save.png" /><br />Save Image</button>
+  <div id="buttons">
+    <button type="button" id="start" title="Start"><img alt="" src="play.png" /><br />Start</button>
+    <button type="button" id="stop" title="Pause"><img alt="" src="pause.png" /><br />Pause</button>
+    <button type="button" id="step" title="Step"><img alt="" src="step.png" /><br />Step</button>
+    <button type="button" id="clear" title="Clear"><img alt="" src="clear.png" /><br />Clear</button>
+    <span class="separator"></span>
+    <button type="button" id="random" title="Fill Random"><img alt="" src="fill-random.png" /><br />Fill Random</button>
+    <span class="separator"></span>
+    <button type="button" id="save" title="Save Image"><img alt="" src="save.png" /><br />Save Image</button>
+  </div>
+
+  <canvas id="canvas">
+    Your browser doesn't support the <i>canvas</i> element.
+  </canvas>
+
+  <form id="controls">
+    <h3>Options</h3>
+    <p><label for="s">Threshold</label> <input id="s" type="number" min="0" max="8" /></p>
+    <p><label for="a">Active states</label> <input id="a" type="number" min="0" max="20" /></p>
+    <p><label for="g">Rarefactory states</label> <input id="g" type="number" min="0" max="20" /></p>
+    <p style="text-align:right"><button type="button" id="reset">Reset</button> <button type="submit" id="apply"><span class="checkmark">&#x2714;</span> Apply</button></p>
+  </form>
+
+  <div id="blackouter"></div>
+  <div id="savebox"></div>
 </div>
-<canvas id="canvas">
-Your browser doesn't support the <i>canvas</i> element.
-</canvas>
-<form id="controls">
-<h3>Options</h3>
-<p><label for="s">Threshold</label> <input id="s" type="number" min="0" max="8" /></p>
-<p><label for="a">Active states</label> <input id="a" type="number" min="0" max="20" /></p>
-<p><label for="g">Rarefactory states</label> <input id="g" type="number" min="0" max="20" /></p>
-<p style="text-align:right"><button type="button" id="reset">Reset</button> <button type="submit" id="apply"><span class="checkmark">&#x2714;</span> Apply</button></p>
-</form>
-</div>
-<div id="blackouter"></div>
-<div id="savebox"></div>
-<h2>How it works</h2>
+
+<h2 style="clear: both">How it works</h2>
 <p>Each cell is either <strong style="color:#000">resting</strong>, <strong style="color:#f00">active</strong> or <strong style="color:#00f">rarefactory</strong>. When a resting cell has active cells next to it, it becomes active. A cell that has been active becomes rarefactory, then resting again. As cells activate other cells, wave patterns appear.</p>
 <p>This experiment uses <a href="http://en.wikipedia.org/wiki/Canvas_element">HTML Canvas</a> &ndash; it may work slowly or not at all in your browser.</p>
+
 <h2>Links</h2>
 <ul>
-<li><a href="http://www.uni-tuebingen.de/uni/bcm/schoenfisch/greene.html">http://www.uni-tuebingen.de/uni/bcm/schoenfisch/greene.html</a></li>
+  <li><a href="http://psoup.math.wisc.edu/java/jgh.html">Primordial Soup Kitchen: Greenberg-Hastings Models</a></li>
+  <li><a href="http://en.wikipedia.org/wiki/Excitable_medium">Wikipedia: Excitable medium</a></li>
 </ul>
