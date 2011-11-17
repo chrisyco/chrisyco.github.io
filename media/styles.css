@@ -1,0 +1,8 @@
+@import url(screen.css) screen, projection;
+
+body {
+  font-family: Georgia, serif;
+  line-height: 150%;
+  margin: 0;
+  padding: 0;
+}

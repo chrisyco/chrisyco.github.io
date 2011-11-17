@@ -1,0 +1,24 @@
+---
+title: Times Table Generator
+layout: default
+css: [tt.css]
+js: [http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js, tt.js]
+---
+<noscript>
+  <p>
+    <strong>Error:</strong> You seem to have JavaScript disabled.
+    To use this tool, you must enable JavaScript.
+  </p>
+</noscript>
+<form id="options">
+<p>
+  <label for="rows">Rows: </label>
+  <input type="text" id="rows" name="rows" value="0,2-10">
+</p>
+<p>
+  <label for="cols">Columns: </label>
+  <input type="text" id="cols" name="cols" value="1-12">
+</p>
+</form>
+<hr>
+<div id="sandbox"></div>

@@ -1,0 +1,4 @@
+lsi: true
+pygments: true
+markdown: rdiscount
+permalink: /blog/:year/:month/:day/:title/

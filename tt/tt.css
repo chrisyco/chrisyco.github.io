@@ -1,0 +1,23 @@
+label {
+  clear: left;
+  display: block;
+  float: left;
+  width: 5em;
+}
+#sandbox table {
+  border-collapse: collapse;
+}
+#sandbox td, #sandbox th {
+  min-width: 2.5em;
+  text-align: right;
+  padding: 0.125em 0.375em;
+}
+#sandbox thead tr, #sandbox tbody tr:nth-child(even) th {
+  background: #aea;
+}
+#sandbox tbody tr:nth-child(even), #sandbox tbody tr:nth-child(odd) th {
+  background: #cfc;
+}
+#sandbox tbody tr:nth-child(odd) {
+  background: #fafffa;
+}

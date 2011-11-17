@@ -1,0 +1,27 @@
+---
+title: Invisible Admin
+layout: default
+---
+<p><strong>Invisible Admin</strong> is a tiny patch that gives a <a href="http://www.phpbb.com/">phpBB</a> user admin permissions without anyone noticing.</p>
+<p>It does this by overriding phpBB's permission and logging system.</p>
+<h2>Features</h2>
+<ul>
+  <li>Make anyone an admin without anyone noticing!</li>
+  <li>Disable logging for a certain user (optional)</li>
+  <li>Tested on phpBB 3.0.8</li>
+</ul>
+<h2>Downloads</h2>
+<p>Make sure you choose the correct version!</p>
+<ul>
+  <li>Patch for <a href="phpbb-patch-3.0.8.diff">phpBB 3.0.8</a></li>
+</ul>
+<h2>How to use</h2>
+<ol>
+  <li>
+      Find out the target user's ID. If you visit their profile page, their ID should be the last part of the URL:
+      <div><img src="user-id.png" /></div>
+  </li>
+  <li>Download the file below and open it in your favorite text editor. Replace every occurence of <q>63</q> with the user ID.</li>
+  <li>Apply the patch using the <a href="http://linux.die.net/man/1/patch">patch</a> tool. If you don't know how, this is not for you.</li>
+  <li>WIN! That user should see the <q>Admin Control Panel</q> link at the bottom of the page.</li>
+</ol>

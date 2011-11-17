@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    version="1.1"
+    width="800"
+    height="600">
+<script type="text/javascript">
+/*<![CDATA[*/
+var SVG_NS = "http://www.w3.org/2000/svg";
+
+var width = 800, height = 600;
+var num_raindrops = 256, frame_rate = 20, min_speed = 4, max_speed = 8;
+var speed_multiplier = 20 / frame_rate;
+
+function hide_nojs() {
+    var nojs = document.getElementById("nojs");
+    if(nojs) {
+        nojs.parentNode.removeChild(nojs);
+    }
+}
+
+function Raindrop(box, distance) {
+    // The distance away from the viewer
+    this.distance = distance;
+
+    // How far it should fall on each iteration
+    this.fall = (1.0 - this.distance) * (max_speed - min_speed) + min_speed;
+    this.fall *= speed_multiplier;
+
+    // The SVG <circle> element
+    this.elem = document.createElementNS(SVG_NS, "circle");
+
+    // Closer raindrops are bigger and lighter
+    this.elem.setAttribute("r", ""+Math.floor((1 - this.distance) * 8 + 2));
+    this.elem.setAttribute("fill", "rgb("
+        + Math.floor(170 - 170 * this.distance) + ","
+        + Math.floor(255 - 255 * this.distance) + ",255)");
+
+    // Add the element to the box
+    box.appendChild(this.elem);
+
+    // Initialize the circle
+    this.reset(true);
+}
+
+Raindrop.prototype.reset = function(start) {
+    // Start at a random position
+    this.x = Math.floor(Math.random() * width);
+
+    if(start) {
+        this.y = Math.floor(Math.random() * height) - height - 25;
+    } else {
+        this.y = -25;
+    }
+
+    this.elem.setAttribute("cx", ""+this.x);
+    this.elem.setAttribute("cy", ""+this.y);
+};
+
+Raindrop.prototype.move = function() {
+    // Keep falling until I fall off the screen
+    if(this.y < height + 25) {
+        this.y += this.fall;
+        this.elem.setAttribute("cy", this.y);
+    // Once I've fallen off, I have a 10% chance of reappearing
+    } else if(Math.random() < 0.1) {
+        this.reset();
+    }
+};
+
+function loop() {
+    var delay = Math.floor(1000/frame_rate);
+    for(var i = 0; i < rain.length; i++) {
+        rain[i].move();
+    }
+    setTimeout(arguments.callee, delay);
+}
+
+window.onload = function() {
+    hide_nojs();
+
+    bg = document.createElementNS(SVG_NS, "rect");
+    bg.setAttribute("x", "0");
+    bg.setAttribute("y", "0");
+    bg.setAttribute("width", "100%");
+    bg.setAttribute("height", "100%");
+    document.documentElement.appendChild(bg);
+
+    box = document.createElementNS(SVG_NS, "g");
+    document.documentElement.appendChild(box);
+
+    rain = [];
+    for(var i = 0; i < num_raindrops; i++) {
+        rain[i] = new Raindrop(box, 1-(i/num_raindrops));
+    }
+
+    loop();
+};
+/*]]>*/
+</script>
+<g
+    id="nojs">
+    <rect x="4" y="48" width="720" height="240" fill="#ff0" />
+    <text
+        style="font-size:48px;fill:#000;font-family:DejaVu Sans,sans-serif"
+        xml:space="preserve"
+        y="72">
+        <tspan x="32" dy="1em">Your browser doesn't seem</tspan>
+        <tspan x="32" dy="1em">to support JavaScript.</tspan>
+        <!--<a xlink:href="http://chrisyco.appspot.com/comp/svg/support" xlink:type="simple"><tspan x="32" dy="1.5em" style="fill:#06f">More info</tspan></a>-->
+    </text>
+</g>
+</svg>
