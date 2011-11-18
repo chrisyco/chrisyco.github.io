@@ -1,5 +1,5 @@
 body {
-  background: #3a3;
+  background: #fff url('pattern-00.png');
 }
 
 a {
@@ -38,9 +38,17 @@ a:active {
   box-shadow: none;
 }
 
+#container {
+  max-width: 50em;
+  margin: 5px auto;
+  border: 1px solid #0a0;
+  box-shadow: 2px 2px 0 rgba(0,0,0,0.33);
+}
+
 header {
-  margin: 0;
   border-bottom: 1px solid #090;
+  background: #3a3;
+  border: 1px solid #3a3;
 }
 
 header h2 {
@@ -55,13 +63,13 @@ header h2 a:before {
 
 header h1 {
   margin: 0.5em 20px 0;
-  color: #000;
+  color: #fff;
   text-shadow: 0 0 2px #000;
+  text-shadow: 1px 1px 0 #000;
 }
 
 #main {
   background: #fff;
-  border: 1px solid transparent;
   padding: 1em 0 1em;
 }
 
@@ -79,6 +87,7 @@ header h1 {
 
 footer {
   border-top: 1px solid #090;
+  background: #3a3;
 }
 
 footer p {

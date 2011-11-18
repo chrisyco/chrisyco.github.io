@@ -1,4 +1,4 @@
-#container {
+#widget {
     float: left;
     border: 1px solid #0a0;
     border-color: #0c0 #090 #090 #0c0;
@@ -16,14 +16,13 @@
     border-bottom: 1px solid #090;
 }
 label {
-    display: inline-block;
-    width: 10em;
+    display: block;
 }
 input {
-    width: 10em;
+    width: 12em;
     text-align: right;
 }
-#buttons button {
+button {
     min-height: 3em;
 }
 #buttons button[disabled] img {
@@ -40,7 +39,7 @@ button.clickme {
 .checkmark {
     color: #060;
     font-size: 175%;
-    vertical-align: middle;
+    vertical-align: center;
 }
 button.clickme .checkmark {
     color: #f00;

@@ -7,8 +7,6 @@ body {
   padding: 0;
 }
 
-address, article, aside, audio, blockquote,
-canvas, dl, fieldset, form, hr,
-ol, p, pre, table, ul, video {
+address, article, aside, blockquote, dl, fieldset, form, hr, ol, p, pre, table, ul {
   margin: 1em 0;
 }

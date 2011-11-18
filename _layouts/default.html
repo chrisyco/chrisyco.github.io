@@ -12,9 +12,9 @@
   </title>
 
   <meta name="author" content="Chris Wong" />
+  <meta name="viewport" content="width=820px" />
 
   <link rel="stylesheet" type="text/css" href="/media/styles.css" />
-
   {% for url in page.css %}
     <link rel="stylesheet" type="text/css" href="{{ url }}" />
   {% endfor %}
@@ -26,27 +26,31 @@
 </head>
 <body>
 
-  <header>
-    {% unless page.home %}
-      <h2><a href="/" rel="contents">Chris's Space</a></h2>
-    {% endunless %}
+  <div id="container">
 
-    <h1>
-      {% if page.title %}
-        {{ page.title }}
-      {% else %}
-        Chris's Space
-      {% endif %}
-    </h1>
-  </header>
+    <header>
+      {% unless page.home %}
+        <h2><a href="/" rel="contents">Chris's Space</a></h2>
+      {% endunless %}
 
-  <div id="main">
-    {{ content }}
+      <h1>
+        {% if page.title %}
+          {{ page.title }}
+        {% else %}
+          Chris's Space
+        {% endif %}
+      </h1>
+    </header>
+
+    <div id="main">
+      {{ content }}
+    </div>
+
+    <footer>
+      <p>&copy; 2011 Chris Wong. <a href="http://creativecommons.org/licenses/by-sa/3.0/">Some rights reserved.</a></p>
+    </footer>
+
   </div>
-
-  <footer>
-    <p>&copy; 2011 Chris Wong. <a href="http://creativecommons.org/licenses/by-sa/3.0/">Some rights reserved.</a></p>
-  </footer>
 
 </body>
 </html>
