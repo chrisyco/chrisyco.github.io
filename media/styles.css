@@ -1,0 +1,12 @@
+@import url(screen.css) screen, projection;
+
+body {
+  font-family: Georgia, serif;
+  line-height: 150%;
+  margin: 0;
+  padding: 0;
+}
+
+address, article, aside, blockquote, dl, fieldset, form, hr, ol, p, pre, table, ul {
+  margin: 1em 0;
+}

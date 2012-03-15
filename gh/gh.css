@@ -1,0 +1,78 @@
+#widget {
+    float: left;
+    border: 1px solid #0a0;
+    border-color: #0c0 #090 #090 #0c0;
+    background: #cfc;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+#controls {
+    float: left;
+    margin: 0 1.5em;
+}
+#buttons {
+    padding: 8px;
+    background: #6a6;
+    border-bottom: 1px solid #090;
+}
+label {
+    display: block;
+}
+input {
+    width: 12em;
+    text-align: right;
+}
+button {
+    min-height: 3em;
+}
+#buttons button[disabled] img {
+    opacity: 0.25;
+}
+#canvas {
+    border: 1px solid #aaa;
+    float: left;
+}
+button.clickme {
+    color: red;
+    font-weight: bold;
+}
+.checkmark {
+    color: #060;
+    font-size: 175%;
+    vertical-align: center;
+}
+button.clickme .checkmark {
+    color: #f00;
+}
+.separator {
+    display: inline-block;
+    width: 8px;
+}
+div.blackout {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #000;
+    opacity: .7;
+}
+div.popup {
+    position: fixed;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    width: 528px;
+    height: 528px;
+    margin: -264px 0 0 -264px;
+    border: 1px solid #0a0;
+    border-color: #0c0 #090 #090 #0c0;
+    background: #cfc;
+    opacity: 1;
+    overflow: auto;
+    padding: 8px;
+}
+div.popup p {
+    margin-top: 0;
+    font: 75%/125% sans-serif;
+}

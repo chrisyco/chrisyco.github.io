@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta charset="utf-8" />
+
+  <title>
+    Chris's Space
+    
+      &ndash; Greenberg-Hastings Automaton
+    
+  </title>
+
+  <meta name="author" content="Chris Wong" />
+  <meta name="viewport" content="width=device-width" />
+
+  <link rel="stylesheet" type="text/css" href="/media/styles.css" />
+  
+    <link rel="stylesheet" type="text/css" href="gh.css" />
+  
+
+  
+    <script type="text/javascript" src="gh.js"></script>
+  
+
+</head>
+<body>
+
+  <div id="container">
+
+    <header>
+      
+        <h2><a href="/" rel="contents">Chris's Space</a></h2>
+      
+
+      <h1>
+        
+          Greenberg-Hastings Automaton
+        
+      </h1>
+    </header>
+
+    <div id="main">
+      <!--[if lt IE 9]>
+<p>This experiment will not work in Internet Explorer. Try this experiment with a better browser such as <a href="http://www.google.com/chrome">Google Chrome</a> instead.</p>
+<![endif]-->
+<div id="widget">
+  <div id="buttons">
+    <button type="button" id="start" title="Start"><img alt="" src="play.png" /><br />Start</button>
+    <button type="button" id="stop" title="Pause"><img alt="" src="pause.png" /><br />Pause</button>
+    <button type="button" id="step" title="Step"><img alt="" src="step.png" /><br />Step</button>
+    <button type="button" id="clear" title="Clear"><img alt="" src="clear.png" /><br />Clear</button>
+    <span class="separator"></span>
+    <button type="button" id="random" title="Fill Random"><img alt="" src="fill-random.png" /><br />Fill Random</button>
+    <span class="separator"></span>
+    <button type="button" id="save" title="Save Image"><img alt="" src="save.png" /><br />Save Image</button>
+  </div>
+
+  <canvas id="canvas">
+    Your browser doesn't support the <i>canvas</i> element.
+  </canvas>
+
+  <form id="controls">
+    <h3>Options</h3>
+    <p><label for="s">Threshold</label> <input id="s" type="number" min="0" max="8" /></p>
+    <p><label for="a">Active states</label> <input id="a" type="number" min="0" max="20" /></p>
+    <p><label for="g">Rarefactory states</label> <input id="g" type="number" min="0" max="20" /></p>
+    <p style="text-align:right"><button type="button" id="reset">Reset</button> <button type="submit" id="apply"><span class="checkmark">&#x2714;</span> Apply</button></p>
+  </form>
+
+  <div id="blackouter"></div>
+  <div id="savebox"></div>
+</div>
+
+<h2 style="clear: both">How it works</h2>
+<p>Each cell is either <strong style="color:#000">resting</strong>, <strong style="color:#f00">active</strong> or <strong style="color:#00f">rarefactory</strong>. When a resting cell has active cells next to it, it becomes active. A cell that has been active becomes rarefactory, then resting again. As cells activate other cells, wave patterns appear.</p>
+<p>This experiment uses <a href="http://en.wikipedia.org/wiki/Canvas_element">HTML Canvas</a> &ndash; it may work slowly or not at all in your browser.</p>
+
+<h2>Links</h2>
+<ul>
+  <li><a href="http://psoup.math.wisc.edu/java/jgh.html">Primordial Soup Kitchen: Greenberg-Hastings Models</a></li>
+  <li><a href="http://en.wikipedia.org/wiki/Excitable_medium">Wikipedia: Excitable medium</a></li>
+</ul>
+
+    </div>
+
+    <footer>
+      <p>&copy; 2011 Chris Wong. <a href="http://creativecommons.org/licenses/by-sa/3.0/">Some rights reserved.</a></p>
+    </footer>
+
+  </div>
+
+</body>
+</html>

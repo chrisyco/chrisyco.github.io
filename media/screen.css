@@ -1,0 +1,96 @@
+body {
+  background: #fff url('pattern-00.png');
+}
+
+a {
+  text-decoration: none;
+  padding: 2px;
+  position: relative;
+}
+
+a:link {
+  color: #060;
+  border: 1px dotted #060;
+}
+
+a:visited {
+  color: #000;
+  border: 1px dotted #000;
+}
+
+a:hover, a:active {
+  color: #fff;
+  background: #3a3;
+  border: 1px solid #060;
+}
+
+a:hover {
+  position: relative;
+  top: -2px;
+  left: -2px;
+  text-shadow: 1px 1px 1px #000;
+  box-shadow: 2px 2px 0 rgba(0,0,0,0.33);
+}
+
+a:active {
+  top: 0;
+  left: 0;
+  box-shadow: none;
+}
+
+#container {
+  max-width: 50em;
+  margin: 5px auto;
+  border: 1px solid #0a0;
+  box-shadow: 2px 2px 0 rgba(0,0,0,0.33);
+}
+
+header {
+  border-bottom: 1px solid #090;
+  background: #3a3;
+  border: 1px solid #3a3;
+}
+
+header h2 {
+  font-size: 100%;
+  font-weight: normal;
+  margin: 10px 20px -0.5em;
+}
+
+header h2 a:before {
+  content: "\25C2\A0";
+}
+
+header h1 {
+  margin: 0.5em 20px 0;
+  color: #fff;
+  text-shadow: 0 0 2px #000;
+  text-shadow: 1px 1px 0 #000;
+}
+
+#main {
+  background: #fff;
+  padding: 1em 0 1em;
+}
+
+#main>* {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+#main h2 {
+  margin: 2em 0 0;
+  border-bottom: 1px solid #090;
+  padding-left: 20px;
+  line-height: 75%;
+}
+
+footer {
+  border-top: 1px solid #090;
+  background: #3a3;
+}
+
+footer p {
+  margin: 0 20px;
+  font-size: 75%;
+}
